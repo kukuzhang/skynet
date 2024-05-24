@@ -1,3 +1,111 @@
+v1.7.0 (2023-11-13)
+-----------
+* Update Lua to 5.4.6
+* Update lpeg to 1.1.0
+* Improve mongo driver
+* Fix service session rewind issue
+* Add websocket.is_closed
+
+v1.6.0 (2022-11-16)
+-----------
+* Update Lua to 5.4.4 (github Nov 8, 2022)
+* Update jemalloc to 5.3.0
+* Update lpeg to 1.0.2 (For sproto)
+* Update mongo driver to support the newest wire protocol
+* socket.listen()/cluster.open() returns ip address and port
+* Add service.close()
+
+v1.5.0 (2021-11-9)
+-----------
+* Update Lua to 5.4.3
+* Fix socket half close issues
+* Fix TLS issues
+* Improve websocket support
+* Improve redis support
+* Rework skynet.init/skynet.require
+* Add socket.onclose
+* Add httpc.request_stream
+
+v1.4.0 (2020-11-16)
+-----------
+* Update Lua to 5.4.2
+* Add skynet.select
+* Improve mysql driver (@zero-rp @xiaojin @yxt945)
+* Improve websocket and ssl (@lvzixun)
+* Improve sproto (double @lvzixun map @t0350)
+* Add padding mode PKCS7 for DES
+* Add jmem in debug console
+* Add skynet_socket_pause for net traffic control
+* Add timestamp to default logger
+
+v1.3.0 (2019-11-19)
+-----------
+* Improve mysql driver (@yxt945)
+* Improve cluster
+* Improve lua shared proto (@hongling0)
+* Improve socket.write
+* Add lua sharetable
+* Add https support (@lvzixun)
+* Add websocket support (@lvzixun)
+* Fix bug in dns
+* Fix some memory leaks
+* jemalloc update to 5.2.1
+
+v1.2.0 (2018-11-6)
+-----------
+* Improve cluster support
+* Improve mongodb driver
+* Improve redis driver
+* Improve socket concurrent write
+* Improve socket channel
+* Improve service gate
+* Improve udp support
+* Add skynet.ignoreret
+* Add skynet.trace
+* Add skynet.context
+* Improve skynet.wait/wakeup
+* Add socket.netstat
+* Add socketchannel.overload
+* Fix memory leak for dead service
+* lua update to 5.3.5
+* jemalloc update to 5.1.0
+
+v1.1.0 (2017-10-31)
+-----------
+* add socket.disconnected()
+* fix bugs : see comments for detail
+
+v1.1.0-rc (2017-7-18)
+-----------
+* config file : support include
+* debug console : User config binding IP
+* debug console : Add call command
+* debug console : Report error message of inject code
+* debug console : Change response message
+* sharedata : Add sharedata.flush
+* sharedata : Add sharedata.deepcopy
+* cluster : Add cluster.send
+* cluster : Add API to update config table
+* skynet : Add skynet.state
+* skynet : Keep the order of skynet.wakeup
+* skynet : Add a MEMORY_CHECK macro for debugging
+* httpc : Add httpc.timeout
+* mongo driver : sort support multi-key
+* bson : Check utf8 string
+* bson : No longer support numberic key 
+* daemon mode: Can output the error messages
+* sproto : Support decimal number
+* sproto: Support binary type
+* sproto: Support response nil
+* crypt: Add crypt.hmac64_md5
+* redis: Add redis-cluster support
+* socket server : Optimize socket write (Try direct write from worker thread first)
+* Add prefix skynet to all skynet lua modules
+* datasheet : New module for replacement of sharedata
+* jemalloc : Update to 5.0.1
+* lua : Update to 5.3.4
+* lpeg : Update to 1.0.1
+
 v1.0.0 (2016-7-11)
 -----------
 * Version 1.0.0 Released
@@ -244,7 +352,7 @@ v0.6.0 (2014-8-18)
 * add sharedata
 * bugfix: service exit before init would not report back
 * add skynet.response and check multicall skynet.ret
-* skynet.newservice throw error when lanuch faild
+* skynet.newservice throw error when lanuch failed
 * Don't check imported function in snax.hotfix
 * snax service add change SERVICE_PATH and add it to package.path
 * skynet.redirect support string address

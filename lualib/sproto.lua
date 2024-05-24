@@ -107,6 +107,7 @@ local function queryproto(self, pname)
 
 	return v
 end
+sproto.queryproto = queryproto
 
 function sproto:exist_proto(pname)
 	local v = self.__pcache[pname]
@@ -239,7 +240,7 @@ function host:attach(sp)
 			self.__session[session] = proto.response or true
 		end
 
-		if args then
+		if proto.request then
 			local content = core.encode(proto.request, args)
 			return core.pack(header ..  content)
 		else
