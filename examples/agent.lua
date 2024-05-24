@@ -23,6 +23,13 @@ function REQUEST:set()
 	local r = skynet.call("SIMPLEDB", "lua", "set", self.what, self.value)
 end
 
+function REQUEST:test()
+--	print("test", self.key, self.val)
+	 local r = skynet.call("SIMPLEDB", "lua", "get", self.key)
+	 print("SIMPLEDB get", self.key, r)
+end
+
+
 function REQUEST:handshake()
 	return { msg = "Welcome to skynet, I will send heartbeat every 5 sec." }
 end

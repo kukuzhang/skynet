@@ -30,7 +30,15 @@ set 3 {
 	}
 }
 
-quit 4 {}
+test 4 {
+	request {
+		key 0 : string
+		val 1 : string
+	}
+}
+
+
+quit 5 {}
 
 ]]
 
