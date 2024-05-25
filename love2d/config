@@ -1,0 +1,8 @@
+include "config.path"
+
+thread = 1
+logger = nil
+logpath = "."
+harbor = 0
+start = "love2d_start"  -- 你想要启动的脚本名字
+bootstrap = "snlua bootstrap"   -- 启动脚本的入口函数
